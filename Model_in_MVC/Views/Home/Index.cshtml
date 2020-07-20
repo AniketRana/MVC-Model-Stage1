@@ -1,0 +1,97 @@
+﻿@model Model_in_MVC.Models.Employee   
+@*@using Model_in_MVC.Models; *@  
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <div>
+        Aniket.Rana@gmail.com
+    </div>
+    <div>
+        @DateTime.Now
+        <label>My Twitter Account = @@AniketRanaa </label>
+    </div>
+    <table>
+        <tr>
+            <td>Id</td>
+            <td>@Model.id</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>@Model.name</td>
+        </tr>
+        <tr>
+            <td>Addresss</td>
+            <td>@Model.address</td>
+        </tr>
+    </table>
+    <div>  @DateTime.Now </div>
+    <div>  @(9 - 8)</div>
+
+    <div>
+        @{
+            var a = 5;
+            var b = 9;
+            var c = b + a;
+            var currentTime = DateTime.Now;
+            var tomorrowTime = DateTime.Now.AddDays(1);
+            var colorList = new List<string>() { "Red", "Green", "Yellow" };
+        }
+    </div>
+
+    <div>
+        <label>
+            @c
+        </label>
+        <label> current time - @currentTime</label>
+        <label> Tomorrow time - @tomorrowTime</label>
+        <label>  @colorList.FirstOrDefault()</label>
+    </div>
+
+    <br><br><br><br>
+
+    @{
+        bool isTrue = false;
+    }
+    <div>
+
+        @if (isTrue)
+        {
+            <h1>I am true</h1>
+        }
+        else
+        {
+            <h1>I am false</h1>
+        }
+    </div>
+    <br>
+    @(isTrue == true ? "true" : "false")
+    <br>
+    @for (int i = 0; i < 10; i++)
+    {
+        <label>@i</label>
+        <br>
+    }
+
+    <br>
+    <br>
+
+    @{
+        var List = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        foreach (var item in List)
+        {
+            <h1>Item @item</h1>
+        }
+    }
+
+
+
+
+</body>
+</html>

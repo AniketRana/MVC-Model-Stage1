@@ -1,0 +1,45 @@
+﻿@using Model_in_MVC.Models
+@model Emp
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("MyForm"))
+        {
+            @Html.TextBoxFor(x => x.name)
+            <br />
+            <br />
+
+            @Html.TextBoxFor(x => x.address)
+            <br />
+            <br />
+
+            @Html.CheckBoxFor(x => x.isEmp)
+
+            <br />
+            <br />
+            
+            <input type="submit" value="Press me" />
+            
+
+        }
+
+
+
+
+
+
+
+    </div>
+</body>
+</html>

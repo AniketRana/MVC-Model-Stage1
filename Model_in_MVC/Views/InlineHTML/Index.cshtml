@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+        @helper MyListHelper(string[] str)
+        {
+            if (str.Length == 0)
+            {<label>no data found</label>}
+            else
+            {
+
+                <ul>
+                    @foreach (var item in str)
+                    {
+                        <li>@item</li>
+                    }
+
+                </ul>
+            }
+        }
+    </div>
+    <div>
+        <h1>List name</h1>
+        <label>
+            @MyListHelper(new string[] { "Aniket", "Prem", "Parth", "Rahul" })
+        </label>
+    </div>
+
+    <div>
+        <h1>List programming language</h1>
+        <label>
+            @MyListHelper(new string[] { ".net", "R", "Python", "java", "Go" })
+        </label>
+    </div>
+
+    <div>
+        <h1>List empty</h1>
+        <label>
+            @MyListHelper(new string[] { })
+        </label>
+    </div>
+</body>
+</html>

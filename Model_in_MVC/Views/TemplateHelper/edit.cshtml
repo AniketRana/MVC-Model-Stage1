@@ -1,0 +1,50 @@
+﻿@using Model_in_MVC.Models
+@model Emp_template
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>edit</title>
+</head>
+<body>
+    <div>
+        @Html.DisplayName("id") = @Html.Editor("id")
+
+        <br />
+        <br />
+
+        @Html.DisplayNameFor(x => x.Name) = @Html.EditorFor(x => x.Name)
+        <br />
+        <br />
+
+        @Html.DisplayNameFor(x => x.BirthDate) = @Html.EditorFor(x => x.BirthDate)
+
+        <br />
+        <br />
+
+        @Html.DisplayNameFor(x => x.BirthTime) = @Html.EditorFor(x => x.BirthTime)
+
+
+        <br />
+        <br />
+        <hr />
+        @using (Html.BeginForm("Myform"))
+        {
+            @Html.EditorForModel();
+
+            <input type="submit"  value="Press me" />
+        }
+
+        <hr />
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @CustomHelper.Image("https://www.c-sharpcorner.com/article/models-in-asp-net-mvc5/Images/Models%20In%20ASP.NET%20MVC19.png", "This is a image")
+        <br />
+        <br />
+        @Html.img("https://www.c-sharpcorner.com/article/models-in-asp-net-mvc5/Images/Models%20In%20ASP.NET%20MVC19.png", "Second img")
+
+        <br />
+        <br />
+        @Html.imgtag("https://www.c-sharpcorner.com/article/models-in-asp-net-mvc5/Images/Models%20In%20ASP.NET%20MVC19.png", "third img")
+
+    </div>
+</body>
+</html>

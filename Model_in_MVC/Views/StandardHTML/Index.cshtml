@@ -1,0 +1,46 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    
+    @using (Html.BeginForm())
+    {
+
+    }
+
+    <div>
+
+        @Html.ActionLink("Click Me", "index", new { name = "Aniket" })
+    </div>
+
+
+    @*This is the starndard html helper with multiple value passing functionality*@
+
+    @{
+
+        string name = "Aniket";
+    }
+    @Html.TextBox("txtName", name, new { id = "customID", @class = "MyClass", style = "width:200px" })
+
+    <br />
+    <br />
+
+    @Html.CheckBox("chkValue", true, new { })
+
+
+    <br />
+    <br />
+
+    @Html.Password("myPassword")
+
+    <br />
+
+
+
+</body>
+</html>
